@@ -377,4 +377,4 @@ curl -b cookies.txt -X POST http://localhost:8000/api/invoices/INV-.../process
 
 ## 许可
 
-私人使用，未授权分发。
+MIT License, 详见 [LICENSE](./LICENSE)
