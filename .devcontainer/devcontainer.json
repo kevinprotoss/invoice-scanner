@@ -6,9 +6,7 @@
   },
   "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "mounts": [
-    "source=invoice-scanner-data,target=/workspace/data,type=volume"
-  ],
+  "mounts": [],
   "forwardPorts": [8000, 5173],
   "portsAttributes": {
     "8000": { "label": "backend" },
