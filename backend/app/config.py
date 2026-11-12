@@ -2,12 +2,18 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
+_DEFAULT_DATA_DIR = str(_PROJECT_ROOT / "data")
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv(_PROJECT_ROOT / ".env", override=False)
+except ImportError:
+    pass
+
 def _env(name: str, default: str | None = None) -> str | None:
     v = os.environ.get(name)
     return v if v not in (None, "") else default
-
-_PROJECT_ROOT = Path(__file__).resolve().parents[2]
-_DEFAULT_DATA_DIR = str(_PROJECT_ROOT / "data")
 
 @dataclass(frozen=True)
 class Settings:
