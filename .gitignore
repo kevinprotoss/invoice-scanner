@@ -6,6 +6,7 @@ password_hash.txt
 
 # 数据与证书
 data/*
+!data/.gitkeep
 certs/*
 !certs/.gitkeep
 

@@ -51,7 +51,7 @@
 ### 2. 克隆仓库并打开
 
 ```bash
-git clone <your-repo-url> invoice-scanner
+git clone git@github.com:kevinprotoss/invoice-scanner.git
 cd invoice-scanner
 code .
 ```
