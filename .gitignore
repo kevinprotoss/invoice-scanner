@@ -1,0 +1,40 @@
+# 密钥与配置
+.env
+.env.*
+!.env.example
+password_hash.txt
+
+# 数据与证书
+data/
+certs/*
+!certs/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# 构建产物
+backend/app/static/
+
+# 编辑器
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log

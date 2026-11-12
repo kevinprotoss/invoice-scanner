@@ -1,0 +1,13 @@
+data
+certs
+.env
+.git
+.gitignore
+**/__pycache__
+**/*.pyc
+backend/.venv
+backend/app/static
+frontend/node_modules
+frontend/dist
+password_hash.txt
+README.md

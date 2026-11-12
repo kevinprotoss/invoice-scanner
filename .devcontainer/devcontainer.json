@@ -1,0 +1,29 @@
+{
+  "name": "Invoice Scanner Dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "mounts": [
+    "source=invoice-scanner-data,target=/workspace/data,type=volume"
+  ],
+  "forwardPorts": [8000, 5173],
+  "portsAttributes": {
+    "8000": { "label": "backend" },
+    "5173": { "label": "frontend" }
+  },
+  "postCreateCommand": "bash .devcontainer/postCreate.sh",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
